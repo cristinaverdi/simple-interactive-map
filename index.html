@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="">
+    <!-- Odometr includes -->
+    <link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-train-station.css" />
+    <script src="http://github.hubspot.com/odometer/odometer.js"></script>
+</head>
+<body>
+<style>
+    leaflet-control-attribution.leaflet-control {
+        display: none;
+    }
+
+    .leaflet-popup pop.leaflet-zoom-animated {
+        opacity: 0.3;
+    }
+
+    .leaflet-control-container .leaflet-control-zoom-in {
+        background-color: rgb(225, 225, 225, 0.6);
+        font-color: #ffff;
+    }
+
+    .leaflet-control-container .leaflet-control-zoom-out {
+        background-color: rgb(225, 225, 225, 0.6);
+        background-color: rgb(225, 225, 225, 0.6);
+        font-color: #ffff;
+        -webkit-transition: color 6s ease-in 6s; ;
+        -moz-transition: color 6s ease-in 6s; ;
+        -o-transition: color 6s ease-in 6s; ;
+        transition: color 6s ease-in 6s; ;
+    }
+
+    div.info.leaflet-control {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-bottom: 1em;
+
+    }
+
+    .economica-font {
+        font-family: "Economica", sans-serif;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .leaflet-popup-content-wrapper {
+        opacity: 0.5
+    }
+
+    .leaflet-popup-tip {
+        opacity: 0.5
+    }
+
+    .pop {
+        opacity: 0.5;
+    }
+
+    .backers-icon {
+        background-color: red;
+        max-width: 3em;
+        max-height: 3em;
+    }
+
+    .uppercase {
+
+        -webkit-text-transform: uppercase;
+        -moz-text-transform: uppercase;
+        -o-text-transform: uppercase;
+        text-transform: uppercase;
+    }
+
+    .info {
+        /*padding-left: 2em;*/
+        color: #ffffff;
+        font-size: 12px;
+        background-color: rgb(12, 12, 15, 0.5);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+        -o-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+        /*width: 43vh;
+        height: 20vh;*/
+        -webkit-border-radius: 0.1em;
+        -moz-border-radius: 0.1em;
+        -o-border-radius: 0.1em;
+        border-radius: 0.1em;
+
+    }
+
+    .info-heading {
+        display: block;
+        padding-top: 0.5em;
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6);
+    }
+
+    .font-desc {
+        font-size: 1.4em;
+    }
+    .font-desc-sec {
+        font-size: 2em;
+    }
+
+    .font-mobile {
+        font-size: 2.3em;
+    }
+
+    .font-desktop {
+        font-size: 2.2em;
+    }
+
+    .animation {
+        -moz-transition: fill 3s ease-in 2s;
+        -webkit-transition: fill 3s ease-in 2s;
+        -o-transition: fill 3s ease-in 2s;
+        transition: fill 3s ease-in 2s;
+    }
+
+    .date {
+        font-size: 0.8em;
+    }
+
+    .highlight {
+        background-color: green;
+        cursor: pointer;
+        -webkit-transition: background-color 2s ease-out;
+        -moz-transition: background-color 2s ease-out;
+        -o-transition: background-color 2s ease-out;
+        transition: background-color 2s ease-out;
+    }
+
+    path {
+        fill: rgb(0,0,0, 0.3);
+
+        -o-transition: 2s fill ease-out;
+        -moz-transition: 2s fill ease-out;
+        -webkit-transition: 2s fill ease-out;
+        transition: 2s fill ease-out;
+    }
+
+    path:hover {
+        fill: rgb(57, 233, 231);
+        -webkit-transition: .5s all ease-in;
+        -moz-transition: .5s all ease-in;
+        -o-transition: .5s all ease-in;
+        transition: .5s all ease-in;
+    }
+
+    span {
+
+        -webkit-transition: all 3s ease-out 2s;
+        -moz-transition: all 3s ease-out 2s;
+        -o-transition: all 3s ease-out 2s;
+        transition: all 3s ease-out 2s;
+    }
+
+    div.odometer-inside {
+        margin-left: 0.4em;
+    }
+
+    span.country {
+        margin-bottom: 3em;
+    }
+
+    span.odometer {
+        margin-left: 1.8em;
+        padding-left: 2em;
+        display: inline;
+        position: relative;
+    }
+
+    span.odometer.backers {
+        margin-top: 0.4em
+    }
+
+    span.odometer.sales {
+        margin-left: 0.8em;
+        margin-top: -0.8em;
+    }
+
+    span.odometer.backers::before {
+        font-family: "Economica", sans-serif;
+        content: 'Backers: ';
+        font-size: 1.3em;
+        margin-left: -3em;
+        display: inline;
+        position: absolute;
+        margin-top: -0.2em;
+    }
+
+    span.sales.odometer.odometer-auto-theme > div.odometer-inside {
+        margin-left: 0.9em;
+    }
+
+
+    span.odometer.sales::before {
+        font-family: "Economica", sans-serif;
+        width: 100%;
+        content: ' Sales:  €';
+        font-size: 1.3em;
+        margin-left: -2.1em;
+        display: inline;
+        position: absolute;
+        margin-top: -0.2em;
+    }
+
+    /*
+    pulsating icon
+    */
+
+    .leaflet-pulsing-icon {
+        -webkit-border-radius: 100%;
+        -o-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+
+        -webkit-box-shadow: 1px 1px 8px 0 rgba(0,0,0,0.75);
+        -moz-box-shadow: 1px 1px 8px 0 rgba(0,0,0,0.75);
+        -o-box-shadow: 1px 1px 8px 0 rgba(0,0,0,0.75);
+        box-shadow: 1px 1px 8px 0 rgba(0,0,0,0.75);
+    }
+
+    .leaflet-pulsing-icon:after {
+        content: "";
+        -o-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -webkit-border-radius: 100%;
+        border-radius: 100%;
+        height: 300%;
+        width: 300%;
+        position: absolute;
+        margin: -100% 0 0 -100%;
+
+    }
+
+    @keyframes pulsate {
+        0% {
+            transform: scale(0.1, 0.1);
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            filter: alpha(opacity=0);
+        }
+        50% {
+            opacity: 1;
+            -ms-filter: none;
+            filter: none;
+        }
+        100% {
+            transform: scale(1.2, 1.2);
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            filter: alpha(opacity=0);
+        }
+    }
+
+    .sep{
+        border: 0;
+        width: 3em;
+        height: 1px;
+        margin: 1em 0;
+        background-color: rgba(255,255,255,0.4);
+    }
+
+
+
+</style>
+<div id="mapid" style="background-color:black; height: 98vh;"></div>
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+</body>
+</html>
+<script src="./countries.geo.js"></script>
+<script>
+
+
+    /**
+     *
+     * **/
+
+
+
+    var splits = [
+        {
+            "country": "American Samoa",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Argentina",
+            "backers": 2.7666,
+            "accumulated": 188.0778,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Australia",
+            "backers": 162.76829999999998,
+            "accumulated": 11065.2439,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Austria",
+            "backers": 45.187799999999996,
+            "accumulated": 3071.9374,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Belarus",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Belgium",
+            "backers": 52.565400000000004,
+            "accumulated": 3573.4782,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Brazil",
+            "backers": 4.611,
+            "accumulated": 313.463,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Brunei",
+            "backers": 2.7666,
+            "accumulated": 188.0778,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Bulgaria",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Canada",
+            "backers": 231.0111,
+            "accumulated": 15704.496299999999,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Colombia",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Costa Rica",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Croatia",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Cyprus",
+            "backers": 1.8444,
+            "accumulated": 125.38520000000001,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Czechia",
+            "backers": 2.7666,
+            "accumulated": 188.0778,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Denmark",
+            "backers": 24.8994,
+            "accumulated": 1692.7002,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Dominican Republic",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Egypt",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "El Salvador",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Estonia",
+            "backers": 1.8444,
+            "accumulated": 125.38520000000001,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Finland",
+            "backers": 22.1328,
+            "accumulated": 1504.6224,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "France",
+            "backers": 12.9108,
+            "accumulated": 877.6964,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Germany",
+            "backers": 195.9675,
+            "accumulated": 13322.177500000002,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Greece",
+            "backers": 1.8444,
+            "accumulated": 125.38520000000001,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Guam",
+            "backers": 1.8444,
+            "accumulated": 125.38520000000001,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Guatemala",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Hong Kong",
+            "backers": 12.9108,
+            "accumulated": 877.6964,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Hungary",
+            "backers": 2.7666,
+            "accumulated": 188.0778,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "India",
+            "backers": 7.3776,
+            "accumulated": 501.54080000000005,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Indonesia",
+            "backers": 6.4554,
+            "accumulated": 438.8482,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Ireland",
+            "backers": 38.7324,
+            "accumulated": 2633.0892,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Israel",
+            "backers": 12.9108,
+            "accumulated": 877.6964,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Italy",
+            "backers": 4.611,
+            "accumulated": 313.463,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Japan",
+            "backers": 20.288400000000003,
+            "accumulated": 1379.2372,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Jersey",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Kosovo",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Lebanon",
+            "backers": 3.6888,
+            "accumulated": 250.77040000000002,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Malaysia",
+            "backers": 19.3662,
+            "accumulated": 1316.5446,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Mauritius",
+            "backers": 1.8444,
+            "accumulated": 125.38520000000001,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Mexico",
+            "backers": 5.5332,
+            "accumulated": 376.1556,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Moldova",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Mongolia",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Montenegro",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Netherlands",
+            "backers": 110.2029,
+            "accumulated": 7491.7657,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "New Caledonia",
+            "backers": 1.8444,
+            "accumulated": 125.38520000000001,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "New Zealand",
+            "backers": 35.9658,
+            "accumulated": 2445.0114,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Norway",
+            "backers": 16.5996,
+            "accumulated": 1128.4668,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Panama",
+            "backers": 3.6888,
+            "accumulated": 250.77040000000002,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Peru",
+            "backers": 1.8444,
+            "accumulated": 125.38520000000001,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Philippines",
+            "backers": 3.6888,
+            "accumulated": 250.77040000000002,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Poland",
+            "backers": 3.6888,
+            "accumulated": 250.77040000000002,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Portugal",
+            "backers": 3.6888,
+            "accumulated": 250.77040000000002,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Qatar",
+            "backers": 2.7666,
+            "accumulated": 188.0778,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Romania",
+            "backers": 3.6888,
+            "accumulated": 250.77040000000002,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Russia",
+            "backers": 2.7666,
+            "accumulated": 188.0778,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Saudi Arabia",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Singapore",
+            "backers": 81.15360000000001,
+            "accumulated": 5516.9488,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Slovakia",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Slovenia",
+            "backers": 1.8444,
+            "accumulated": 125.38520000000001,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "South Africa",
+            "backers": 7.3776,
+            "accumulated": 501.54080000000005,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "South Korea",
+            "backers": 9.222,
+            "accumulated": 626.926,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Spain",
+            "backers": 62.709599999999995,
+            "accumulated": 4263.096799999999,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Sweden",
+            "backers": 44.2656,
+            "accumulated": 3009.2448,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Switzerland",
+            "backers": 46.11,
+            "accumulated": 3134.63,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Taiwan",
+            "backers": 12.9108,
+            "accumulated": 877.6964,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Thailand",
+            "backers": 7.3776,
+            "accumulated": 501.54080000000005,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Trinidad & Tobago",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Tunisia",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Turkey",
+            "backers": 1.8444,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Ukraine",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "United Arab Emirates",
+            "backers": 1.8444,
+            "accumulated": 125.38520000000001,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "United Kingdom",
+            "backers": 367.95779999999996,
+            "accumulated": 25014.3474,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "United States of America",
+            "backers": 2851.4424,
+            "accumulated": 193845.51919999998,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Uruguay",
+            "backers": 0.9222,
+            "accumulated": 62.692600000000006,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Vietnam",
+            "backers": 2.7666,
+            "accumulated": 188.0778,
+            "date": "29-04-2018"
+        },
+        {
+            "country": "Total",
+            "backers": 4611,
+            "accumulated": 313463,
+            "date": "29-04-2018"
+        }
+    ];
+
+
+    window.odometerOptions = {
+        auto: false,
+        duration: 500,
+        animation: 'count'
+    };
+
+    let featureProperties = {};
+
+    for(index in countries.features) {
+        featureProperties = countries.features[index].properties;
+        countryName = featureProperties.name;
+
+        splits.forEach((item) => {
+            if(countryName == item.country) {
+                featureProperties.backers = item.backers;
+                featureProperties.sales = item.accumulated;
+                featureProperties.date = 'Tuesday 24, Apr, 2018';
+            }
+        });
+    }
+
+    let INFO_HEADING = 'Our Kickstarter backers around the globe';
+    let TROPIC_COLOR = '#58E9DB';
+    let COUNTRIES_LAYER_COLOR = '#000000';
+    let COUNTRIES_LAYER_OPACITY = '0.6';
+    let INIT_ZOOM = 3;
+    let HELLO_MESSAGE = 'Hi, we are Tropic! ';
+    let THANKS_MESSAGE= 'Thanks for supporting us! &hearts;';
+    let APPEALING_MESSAGE = 'Navigate to any country';
+    let CENTER_COORDINATES = [41.394423, 2.169292];
+    let BASE_LAYER = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z}/{x}/{y}.png';
+    let FROM_DATE = 'Tuesday 24, Apr';
+    let TO_DATE = 'Sunday 29, Apr';
+    let TOTAL_SALES = '3000000€';
+    let TOTAL_BACKERS = '123.456 people';
+
+    let featureStyles = {
+        style: style,
+        onEachFeature: onEachFeature
+    };
+    let BASE_LAYER_OPTIONS = {
+        attribution: 'By &copy; <a href="">Tropic</a>',
+        minZoom: 0,
+        maxZoom: 20,
+        ext: 'png'
+    };
+
+    let map = L.map('mapid', {
+        zoomControl: false
+    }).setView(CENTER_COORDINATES, INIT_ZOOM);
+
+    L.control.zoom({
+        position:'bottomleft'
+    }).addTo(map);
+
+    L.tileLayer(BASE_LAYER, BASE_LAYER_OPTIONS).addTo(map);
+
+    let countriesLayer;
+
+    countriesLayer = L.geoJson(
+        countries,
+        featureStyles
+
+    ).addTo(map);
+
+    map.dragging.disable();
+    // map.touchZoom.disable();
+
+    var info = L.control();
+
+    info.onAdd = function (map) {
+        this._div = L.DomUtil.create('div', 'info');
+        this._backers = L.DomUtil.create('span', 'odometer economica-font backers');
+        this._sales = L.DomUtil.create('span', 'odometer economica-font sales');
+        this._break = L.DomUtil.create('br');
+        this._date = L.DomUtil.create('span', 'date economica-fontfont-desc-sec');
+        this._total = L.DomUtil.create('span', 'total animation economica-font font-desc');
+
+        this.update();
+        return this._div;
+    };
+
+    info.update = function (props) {
+
+        this._div.innerHTML = '';
+
+        this._heading = L.DomUtil.create('span', 'info-heading font-desktop economica-font');
+        this._heading.innerHTML =  INFO_HEADING;
+        this._div.appendChild(this._heading);
+        this._date.innerHTML = ''+ FROM_DATE + ' - ' + TO_DATE + '<br />';
+        this._div.appendChild(this._date);
+
+        this._sep = L.DomUtil.create('hr', 'sep');
+        this._div.appendChild(this._sep);
+
+        this._subheading = L.DomUtil.create('span', 'country uppercase economica-font font-desc');
+
+        if(props) {
+            this._subheading.innerHTML = props.name + '<br/>'
+        }else {
+            this._total.innerHTML = 'Total backers: ' + TOTAL_BACKERS + '  |  ' + ' Total sales: ' + TOTAL_SALES + '<br />';
+            this._div.appendChild(this._total);
+        }
+        // setInnerHTMLandRemoveUppercase(this._subheading);
+
+        this._div.appendChild(this._subheading);
+
+
+        this._div.appendChild(this._backers);
+
+        this._div.appendChild(this._break);
+        this._div.appendChild(this._sales);
+
+        this._sales.innerHTML = '';
+        this._backers.innerHTML = '';
+
+        if(props) {
+            this._backers.innerHTML = parseInt(Math.ceil(props.backers, 1));
+            this._sales.innerHTML = parseInt(Math.ceil(props.sales, 1));
+
+        }
+    };
+
+    info.addTo(map);
+
+
+    (function(window) {
+
+        L.Icon.Pulse = L.DivIcon.extend({
+
+            options: {
+                className: '',
+                iconSize: [5000,5000],
+                fillColor: TROPIC_COLOR,
+                fillOpacity: 0.8,
+                color: TROPIC_COLOR,
+                animate: true,
+                heartbeat: 2,
+            },
+
+            initialize: function (options) {
+                L.setOptions(this,options);
+
+                // css
+
+                var uniqueClassName = 'lpi-'+ new Date().getTime()+'-'+Math.round(Math.random()*100000);
+
+                var before = ['background-color: '+this.options.fillColor];
+                var after = [
+                    'box-shadow: 0 0 6px 2px '+this.options.color,
+                    'animation: pulsate ' + this.options.heartbeat + 's ease-out',
+                    'animation-iteration-count: infinite',
+                    'animation-delay: '+ (this.options.heartbeat + .1) + 's',
+                ];
+
+                if (!this.options.animate){
+                    after.push('animation: none');
+                    after.push('box-shadow:none');
+                }
+
+                var css = [
+                    '.'+uniqueClassName+'{'+before.join(';')+';}',
+                    '.'+uniqueClassName+':after{'+after.join(';')+';}',
+                ].join('');
+
+                var el = document.createElement('style');
+                if (el.styleSheet){
+                    el.styleSheet.cssText = css;
+                } else {
+                    el.appendChild(document.createTextNode(css));
+                }
+
+                document.getElementsByTagName('head')[0].appendChild(el);
+
+                // apply css class
+
+                this.options.className = this.options.className+' leaflet-pulsing-icon '+uniqueClassName;
+
+                // initialize icon
+
+                L.DivIcon.prototype.initialize.call(this, options);
+
+            }
+        });
+
+        L.icon.pulse = function (options) {
+            return new L.Icon.Pulse(options);
+        };
+
+
+        L.Marker.Pulse = L.Marker.extend({
+            initialize: function (latlng,options) {
+                options.icon = L.icon.pulse(options);
+                L.Marker.prototype.initialize.call(this, latlng, options);
+            }
+        });
+
+        L.marker.pulse = function (latlng,options) {
+            return new L.Marker.Pulse(latlng,options);
+        };
+
+    })(window);
+
+    var pulsingIcon = L.icon.pulse({iconSize:[5,5],color: TROPIC_COLOR});
+    var pulsingMarker= L.marker(CENTER_COORDINATES,{icon: pulsingIcon}).addTo(map);
+
+    var popup = L.popup({className: 'pop'})
+        .setLatLng(CENTER_COORDINATES)
+        .setContent("<b> + HELLO_MESSAGE + </b><br>" + THANKS_MESSAGE )
+        .addTo(map);
+
+    pulsingMarker.bindPopup(popup);
+
+    function setInnerHTMLandRemoveUppercase(el) {
+
+
+        L.DomUtil.removeClass(el, 'uppercase');
+        el.innerHTML = APPEALING_MESSAGE + '<br/>';
+    }
+
+    function style(feature) {
+        console.log(getColor(feature.properties.backers));
+
+        return {
+            stroke: false,
+            fillColor: getColor(feature.properties.backers),
+            fillOpacity: COUNTRIES_LAYER_OPACITY
+        }
+    }
+
+    function getColor(d) {
+        console.log(d);
+        console.log('gettingColor');
+        return d > 500  ? '#8C59E9':
+            d > 100  ? '#D97FE9':
+                d > 50   ? '#A15EAD' :
+                    d > 10   ? '#8A269D':
+                        d > 1   ? '#8A269D' :
+                            d > 0   ? '#5E1A6A' :
+                                '#000000'
+    }
+
+    function showInfo(evt) {
+        const polygonCountry  = evt.target;
+
+        polygonCountry.setStyle({
+            fillOpacity: 0.3,
+        });
+
+        if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+            polygonCountry.bringToFront();
+        }
+
+        info.update(polygonCountry.feature.properties);
+    }
+
+
+    function resetHighlight(evt) {
+        countriesLayer.resetStyle(evt.target);
+        info.update();
+    }
+
+    function zoomToFeature(evt) {
+        map.fitBounds(evt.target.getBounds());
+    }
+
+    function onEachFeature(feature, layer) {
+        layer.on({
+            mouseover: showInfo,
+            mouseout: resetHighlight,
+            click: zoomToFeature
+        });
+    }
+</script>
