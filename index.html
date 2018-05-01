@@ -754,18 +754,27 @@
         animation: 'count'
     };
 
+
+
+    let TO_DATE = 'Sunday 29, Apr';
+
     let featureProperties = {};
 
     for(index in countries.features) {
         featureProperties = countries.features[index].properties;
         countryName = featureProperties.name;
+        featureProperties.backers = 0;
+        featureProperties.sales = 0;
 
         splits.forEach((item) => {
             if(countryName == item.country) {
+                console.log('match', item.country);
                 featureProperties.backers = item.backers;
                 featureProperties.sales = item.accumulated;
-                featureProperties.date = 'Tuesday 24, Apr, 2018';
+
             }
+
+            featureProperties.date = TO_DATE;
         });
     }
 
@@ -780,9 +789,10 @@
     let CENTER_COORDINATES = [41.394423, 2.169292];
     let BASE_LAYER = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z}/{x}/{y}.png';
     let FROM_DATE = 'Tuesday 24, Apr';
-    let TO_DATE = 'Sunday 29, Apr';
-    let TOTAL_SALES = '3000000€';
-    let TOTAL_BACKERS = '123.456 people';
+
+    let totalItem = splits[splits.length - 1];
+    let TOTAL_SALES = totalItem.accumulated;
+    let TOTAL_BACKERS = totalItem.backers;
 
     let featureStyles = {
         style: style,
@@ -795,83 +805,6 @@
         ext: 'png'
     };
 
-    let map = L.map('mapid', {
-        zoomControl: false
-    }).setView(CENTER_COORDINATES, INIT_ZOOM);
-
-    L.control.zoom({
-        position:'bottomleft'
-    }).addTo(map);
-
-    L.tileLayer(BASE_LAYER, BASE_LAYER_OPTIONS).addTo(map);
-
-    let countriesLayer;
-
-    countriesLayer = L.geoJson(
-        countries,
-        featureStyles
-
-    ).addTo(map);
-
-    map.dragging.disable();
-    // map.touchZoom.disable();
-
-    var info = L.control();
-
-    info.onAdd = function (map) {
-        this._div = L.DomUtil.create('div', 'info');
-        this._backers = L.DomUtil.create('span', 'odometer economica-font backers');
-        this._sales = L.DomUtil.create('span', 'odometer economica-font sales');
-        this._break = L.DomUtil.create('br');
-        this._date = L.DomUtil.create('span', 'date economica-fontfont-desc-sec');
-        this._total = L.DomUtil.create('span', 'total animation economica-font font-desc');
-
-        this.update();
-        return this._div;
-    };
-
-    info.update = function (props) {
-
-        this._div.innerHTML = '';
-
-        this._heading = L.DomUtil.create('span', 'info-heading font-desktop economica-font');
-        this._heading.innerHTML =  INFO_HEADING;
-        this._div.appendChild(this._heading);
-        this._date.innerHTML = ''+ FROM_DATE + ' - ' + TO_DATE + '<br />';
-        this._div.appendChild(this._date);
-
-        this._sep = L.DomUtil.create('hr', 'sep');
-        this._div.appendChild(this._sep);
-
-        this._subheading = L.DomUtil.create('span', 'country uppercase economica-font font-desc');
-
-        if(props) {
-            this._subheading.innerHTML = props.name + '<br/>'
-        }else {
-            this._total.innerHTML = 'Total backers: ' + TOTAL_BACKERS + '  |  ' + ' Total sales: ' + TOTAL_SALES + '<br />';
-            this._div.appendChild(this._total);
-        }
-        // setInnerHTMLandRemoveUppercase(this._subheading);
-
-        this._div.appendChild(this._subheading);
-
-
-        this._div.appendChild(this._backers);
-
-        this._div.appendChild(this._break);
-        this._div.appendChild(this._sales);
-
-        this._sales.innerHTML = '';
-        this._backers.innerHTML = '';
-
-        if(props) {
-            this._backers.innerHTML = parseInt(Math.ceil(props.backers, 1));
-            this._sales.innerHTML = parseInt(Math.ceil(props.sales, 1));
-
-        }
-    };
-
-    info.addTo(map);
 
 
     (function(window) {
@@ -951,6 +884,85 @@
 
     })(window);
 
+    let map = L.map('mapid', {
+        zoomControl: false
+    }).setView(CENTER_COORDINATES, INIT_ZOOM);
+
+    L.control.zoom({
+        position:'bottomleft'
+    }).addTo(map);
+
+    L.tileLayer(BASE_LAYER, BASE_LAYER_OPTIONS).addTo(map);
+
+    let countriesLayer;
+
+    countriesLayer = L.geoJson(
+        countries,
+        featureStyles
+
+    ).addTo(map);
+
+    map.dragging.disable();
+    // map.touchZoom.disable();
+
+    var info = L.control();
+
+    info.onAdd = function (map) {
+        this._div = L.DomUtil.create('div', 'info');
+        this._backers = L.DomUtil.create('span', 'odometer economica-font backers');
+        this._sales = L.DomUtil.create('span', 'odometer economica-font sales');
+        this._break = L.DomUtil.create('br');
+        this._date = L.DomUtil.create('span', 'date economica-fontfont-desc-sec');
+        this._total = L.DomUtil.create('span', 'total animation economica-font font-desc');
+
+        this.update();
+        return this._div;
+    };
+
+    info.update = function (props) {
+
+        this._div.innerHTML = '';
+
+        this._heading = L.DomUtil.create('span', 'info-heading font-desktop economica-font');
+        this._heading.innerHTML =  INFO_HEADING;
+        this._div.appendChild(this._heading);
+        this._date.innerHTML = ''+ FROM_DATE + ' - ' + TO_DATE + '<br />';
+        this._div.appendChild(this._date);
+
+        this._sep = L.DomUtil.create('hr', 'sep');
+        this._div.appendChild(this._sep);
+
+        this._subheading = L.DomUtil.create('span', 'country uppercase economica-font font-desc');
+
+        if(props) {
+            this._subheading.innerHTML = props.name + '<br/>'
+        }else {
+            this._total.innerHTML = 'Total backers: ' + TOTAL_BACKERS + '  |  ' + ' Total sales: ' + TOTAL_SALES + '€' + '<br />';
+            this._div.appendChild(this._total);
+        }
+        // setInnerHTMLandRemoveUppercase(this._subheading);
+
+        this._div.appendChild(this._subheading);
+
+
+        this._div.appendChild(this._backers);
+
+        this._div.appendChild(this._break);
+        this._div.appendChild(this._sales);
+
+        this._sales.innerHTML = '';
+        this._backers.innerHTML = '';
+
+        if(props) {
+            this._backers.innerHTML = parseInt(Math.ceil(props.backers, 1));
+            this._sales.innerHTML = parseInt(Math.ceil(props.sales, 1));
+
+        }
+    };
+
+    info.addTo(map);
+
+
     var pulsingIcon = L.icon.pulse({iconSize:[5,5],color: TROPIC_COLOR});
     var pulsingMarker= L.marker(CENTER_COORDINATES,{icon: pulsingIcon}).addTo(map);
 
@@ -963,27 +975,26 @@
 
     function setInnerHTMLandRemoveUppercase(el) {
 
-
         L.DomUtil.removeClass(el, 'uppercase');
         el.innerHTML = APPEALING_MESSAGE + '<br/>';
     }
 
     function style(feature) {
-        console.log(getColor(feature.properties.backers));
+        let countryColor = getColor(feature.properties.backers);
 
         return {
-            stroke: false,
-            fillColor: getColor(feature.properties.backers),
+            color: countryColor,
+            width: '0.3em',
+            opacity: 0.2,
+            fillColor: countryColor,
             fillOpacity: COUNTRIES_LAYER_OPACITY
         }
     }
 
     function getColor(d) {
-        console.log(d);
-        console.log('gettingColor');
-        return d > 500  ? '#8C59E9':
-            d > 100  ? '#D97FE9':
-                d > 50   ? '#A15EAD' :
+        return d > 500  ? '#8C59E9' :
+            d > 100  ?  '#D97FE9' :
+                d > 50   ? '#A15EAD':
                     d > 10   ? '#8A269D':
                         d > 1   ? '#8A269D' :
                             d > 0   ? '#5E1A6A' :
@@ -1018,7 +1029,7 @@
         layer.on({
             mouseover: showInfo,
             mouseout: resetHighlight,
-            click: zoomToFeature
+            /*click: zoomToFeature*/
         });
     }
 </script>
