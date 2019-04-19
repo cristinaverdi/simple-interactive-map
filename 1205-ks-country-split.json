@@ -1,0 +1,752 @@
+[
+  {
+    "country": "American Samoa",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Antigua & Barbuda",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Argentina",
+    "backers": 5.1425,
+    "sales": 387.6975,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Australia",
+    "backers": 245.81150000000002,
+    "sales": 18531.9405,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Austria",
+    "backers": 110.0495,
+    "sales": 8296.726499999999,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Bahrain",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Belarus",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Belgium",
+    "backers": 123.42,
+    "sales": 9304.74,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Bermuda",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Brazil",
+    "backers": 19.5415,
+    "sales": 1473.2505,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Brunei",
+    "backers": 3.0854999999999997,
+    "sales": 232.61849999999998,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Bulgaria",
+    "backers": 9.256499999999999,
+    "sales": 697.8555,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Burkina Faso",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "C√¥te d‚ÄôIvoire",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Cambodia",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Canada",
+    "backers": 345.57599999999996,
+    "sales": 26053.271999999997,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Cape Verde",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Cayman Islands",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Chile",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "China",
+    "backers": 3.0854999999999997,
+    "sales": 232.61849999999998,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Colombia",
+    "backers": 3.0854999999999997,
+    "sales": 232.61849999999998,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Costa Rica",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Croatia",
+    "backers": 5.1425,
+    "sales": 387.6975,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Cura√ßao",
+    "backers": 3.0854999999999997,
+    "sales": 232.61849999999998,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Cyprus",
+    "backers": 4.114,
+    "sales": 310.158,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Czechia",
+    "backers": 12.341999999999999,
+    "sales": 930.4739999999999,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Denmark",
+    "backers": 53.482,
+    "sales": 4032.0539999999996,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Dominican Republic",
+    "backers": 4.114,
+    "sales": 310.158,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Egypt",
+    "backers": 5.1425,
+    "sales": 387.6975,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "El Salvador",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Estonia",
+    "backers": 5.1425,
+    "sales": 387.6975,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Finland",
+    "backers": 41.14,
+    "sales": 3101.58,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "France",
+    "backers": 92.565,
+    "sales": 6978.554999999999,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "French Polynesia",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Germany",
+    "backers": 487.50899999999996,
+    "sales": 36753.723,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Ghana",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Gibraltar",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Greece",
+    "backers": 6.170999999999999,
+    "sales": 465.23699999999997,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Greenland",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Grenada",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Guam",
+    "backers": 4.114,
+    "sales": 310.158,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Guatemala",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Guernsey",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Guinea",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Guyana",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Hong Kong",
+    "backers": 40.1115,
+    "sales": 3024.0405,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Hungary",
+    "backers": 4.114,
+    "sales": 310.158,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Iceland",
+    "backers": 6.170999999999999,
+    "sales": 465.23699999999997,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "India",
+    "backers": 35.9975,
+    "sales": 2713.8825,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Indonesia",
+    "backers": 21.598499999999998,
+    "sales": 1628.3294999999998,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Iraq",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Ireland",
+    "backers": 75.0805,
+    "sales": 5660.3835,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Israel",
+    "backers": 53.482,
+    "sales": 4032.0539999999996,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Italy",
+    "backers": 53.482,
+    "sales": 4032.0539999999996,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Japan",
+    "backers": 50.396499999999996,
+    "sales": 3799.4355,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Jersey",
+    "backers": 4.114,
+    "sales": 310.158,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Jordan",
+    "backers": 4.114,
+    "sales": 310.158,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Kenya",
+    "backers": 4.114,
+    "sales": 310.158,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Kosovo",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Kuwait",
+    "backers": 4.114,
+    "sales": 310.158,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Kyrgyzstan",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Latvia",
+    "backers": 3.0854999999999997,
+    "sales": 232.61849999999998,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Lebanon",
+    "backers": 4.114,
+    "sales": 310.158,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Liberia",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Lithuania",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Luxembourg",
+    "backers": 4.114,
+    "sales": 310.158,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Malaysia",
+    "backers": 67.881,
+    "sales": 5117.607,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Malta",
+    "backers": 3.0854999999999997,
+    "sales": 232.61849999999998,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Martinique",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Mauritius",
+    "backers": 4.114,
+    "sales": 310.158,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Mexico",
+    "backers": 38.054500000000004,
+    "sales": 2868.9615000000003,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Moldova",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Mongolia",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Montenegro",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Morocco",
+    "backers": 4.114,
+    "sales": 310.158,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Mozambique",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Myanmar (Burma)",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Nepal",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Netherlands",
+    "backers": 249.9255,
+    "sales": 18842.0985,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "New Caledonia",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "New Zealand",
+    "backers": 51.425000000000004,
+    "sales": 3876.975,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Nicaragua",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Nigeria",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Norway",
+    "backers": 35.9975,
+    "sales": 2713.8825,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Pakistan",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Palestine",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Panama",
+    "backers": 4.114,
+    "sales": 310.158,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Peru",
+    "backers": 3.0854999999999997,
+    "sales": 232.61849999999998,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Philippines",
+    "backers": 46.2825,
+    "sales": 3489.2774999999997,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Poland",
+    "backers": 8.228,
+    "sales": 620.316,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Portugal",
+    "backers": 13.3705,
+    "sales": 1008.0134999999999,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Puerto Rico",
+    "backers": 3.0854999999999997,
+    "sales": 232.61849999999998,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Qatar",
+    "backers": 7.1995,
+    "sales": 542.7764999999999,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "R√©union",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Romania",
+    "backers": 12.341999999999999,
+    "sales": 930.4739999999999,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Russia",
+    "backers": 9.256499999999999,
+    "sales": 697.8555,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Saudi Arabia",
+    "backers": 4.114,
+    "sales": 310.158,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Seychelles",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Singapore",
+    "backers": 220.099,
+    "sales": 16593.452999999998,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Slovakia",
+    "backers": 5.1425,
+    "sales": 387.6975,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Slovenia",
+    "backers": 8.228,
+    "sales": 620.316,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "South Africa",
+    "backers": 12.341999999999999,
+    "sales": 930.4739999999999,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "South Korea",
+    "backers": 21.598499999999998,
+    "sales": 1628.3294999999998,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "South Sudan",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Spain",
+    "backers": 101.82150000000001,
+    "sales": 7676.410500000001,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Sri Lanka",
+    "backers": 4.114,
+    "sales": 310.158,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "St. Kitts & Nevis",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Sweden",
+    "backers": 83.3085,
+    "sales": 6280.6995,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Switzerland",
+    "backers": 138.8475,
+    "sales": 10467.8325,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Taiwan",
+    "backers": 20.57,
+    "sales": 1550.79,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Tanzania",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Thailand",
+    "backers": 56.567499999999995,
+    "sales": 4264.6725,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Trinidad & Tobago",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Tunisia",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Turkey",
+    "backers": 4.114,
+    "sales": 310.158,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "U.S. Virgin Islands",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Uganda",
+    "backers": 1.0285,
+    "sales": 77.5395,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Ukraine",
+    "backers": 8.228,
+    "sales": 620.316,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "United Arab Emirates",
+    "backers": 14.399,
+    "sales": 1085.5529999999999,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "United Kingdom",
+    "backers": 773.432,
+    "sales": 58309.704000000005,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "United States of America",
+    "backers": 6198.7695,
+    "sales": 467330.5665,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Uruguay",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Vietnam",
+    "backers": 23.6555,
+    "sales": 1783.4085,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Zambia",
+    "backers": 2.057,
+    "sales": 155.079,
+    "date": "Sat, May 12th"
+  },
+  {
+    "country": "Total",
+    "backers": 10285,
+    "sales": 775395,
+    "date": "Sat, May 12th"
+  }
+]

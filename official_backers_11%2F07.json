@@ -1,0 +1,568 @@
+[
+  {
+    "United States of America": {
+      "country": "United States of America",
+      "backers": 7286
+    },
+    "Germany": {
+      "country": "Germany",
+      "backers": 2775
+    },
+    "Great Britain": {
+      "country": "Great Britain",
+      "backers": 2732
+    },
+    "Canada": {
+      "country": "Canada",
+      "backers": 1167
+    },
+    "Netherlands": {
+      "country": "Netherlands",
+      "backers": 1093
+    },
+    "Australia": {
+      "country": "Australia",
+      "backers": 869
+    },
+    "France": {
+      "country": "France",
+      "backers": 868
+    },
+    "Singapore": {
+      "country": "Singapore",
+      "backers": 757
+    },
+    "Austria": {
+      "country": "Austria",
+      "backers": 643
+    },
+    "Switzerland": {
+      "country": "Switzerland",
+      "backers": 632
+    },
+    "Belgium": {
+      "country": "Belgium",
+      "backers": 513
+    },
+    "Spain": {
+      "country": "Spain",
+      "backers": 423
+    },
+    "Sweden": {
+      "country": "Sweden",
+      "backers": 357
+    },
+    "Italy": {
+      "country": "Italy",
+      "backers": 355
+    },
+    "Malaysia": {
+      "country": "Malaysia",
+      "backers": 293
+    },
+    "Denmark": {
+      "country": "Denmark",
+      "backers": 292
+    },
+    "Hong Kong": {
+      "country": "Hong Kong",
+      "backers": 229
+    },
+    "Israel": {
+      "country": "Israel",
+      "backers": 226
+    },
+    "Ireland": {
+      "country": "Ireland",
+      "backers": 207
+    },
+    "India": {
+      "country": "India",
+      "backers": 207
+    },
+    "Thailand": {
+      "country": "Thailand",
+      "backers": 193
+    },
+    "Norway": {
+      "country": "Norway",
+      "backers": 192
+    },
+    "New Zealand": {
+      "country": "New Zealand",
+      "backers": 159
+    },
+    "Philippines": {
+      "country": "Philippines",
+      "backers": 156
+    },
+    "Czech Republic": {
+      "country": "Czech Republic",
+      "backers": 152
+    },
+    "Mexico": {
+      "country": "Mexico",
+      "backers": 144
+    },
+    "Japan": {
+      "country": "Japan",
+      "backers": 144
+    },
+    "Finland": {
+      "country": "Finland",
+      "backers": 144
+    },
+    "Indonesia": {
+      "country": "Indonesia",
+      "backers": 137
+    },
+    "Brasil": {
+      "country": "Brasil",
+      "backers": 117
+    },
+    "Poland": {
+      "country": "Poland",
+      "backers": 106
+    },
+    "United Arab Emirates": {
+      "country": "United Arab Emirates",
+      "backers": 88
+    },
+    "Hungary": {
+      "country": "Hungary",
+      "backers": 78
+    },
+    "Romania": {
+      "country": "Romania",
+      "backers": 77
+    },
+    "Russia": {
+      "country": "Russia",
+      "backers": 73
+    },
+    "Luxembourg": {
+      "country": "Luxembourg",
+      "backers": 73
+    },
+    "South Africa": {
+      "country": "South Africa",
+      "backers": 71
+    },
+    "Slovenia": {
+      "country": "Slovenia",
+      "backers": 71
+    },
+    "Vietnam": {
+      "country": "Vietnam",
+      "backers": 70
+    },
+    "Taiwan": {
+      "country": "Taiwan",
+      "backers": 70
+    },
+    "Portugal": {
+      "country": "Portugal",
+      "backers": 66
+    },
+    "Ukraine": {
+      "country": "Ukraine",
+      "backers": 61
+    },
+    "Lithuania": {
+      "country": "Lithuania",
+      "backers": 61
+    },
+    "Republic of South Korea": {
+      "country": "Republic of South Korea",
+      "backers": 57
+    },
+    "Estonia": {
+      "country": "Estonia",
+      "backers": 56
+    },
+    "Bahrain": {
+      "country": "Bahrain",
+      "backers": 48
+    },
+    "Bulgaria": {
+      "country": "Bulgaria",
+      "backers": 45
+    },
+    "Slovakia": {
+      "country": "Slovakia",
+      "backers": 42
+    },
+    "Malta": {
+      "country": "Malta",
+      "backers": 38
+    },
+    "Montenegro": {
+      "country": "Montenegro",
+      "backers": 37
+    },
+    "Saudi Arabia": {
+      "country": "Saudi Arabia",
+      "backers": 35
+    },
+    "Chile": {
+      "country": "Chile",
+      "backers": 35
+    },
+    "China": {
+      "country": "China",
+      "backers": 32
+    },
+    "Latvia": {
+      "country": "Latvia",
+      "backers": 31
+    },
+    "Iceland": {
+      "country": "Iceland",
+      "backers": 31
+    },
+    "Puerto Rico": {
+      "country": "Puerto Rico",
+      "backers": 23
+    },
+    "Cyprus": {
+      "country": "Cyprus",
+      "backers": 22
+    },
+    "Colombia": {
+      "country": "Colombia",
+      "backers": 20
+    },
+    "Lebanon": {
+      "country": "Lebanon",
+      "backers": 18
+    },
+    "Kuwait": {
+      "country": "Kuwait",
+      "backers": 17
+    },
+    "Turkey": {
+      "country": "Turkey",
+      "backers": 15
+    },
+    "Peru": {
+      "country": "Peru",
+      "backers": 15
+    },
+    "Costa Rica": {
+      "country": "Costa Rica",
+      "backers": 15
+    },
+    "Argentina": {
+      "country": "Argentina",
+      "backers": 15
+    },
+    "Serbia": {
+      "country": "Serbia",
+      "backers": 13
+    },
+    "Qatar": {
+      "country": "Qatar",
+      "backers": 13
+    },
+    "Brunei Darussalam": {
+      "country": "Brunei Darussalam",
+      "backers": 12
+    },
+    "Mauritius": {
+      "country": "Mauritius",
+      "backers": 9
+    },
+    "French Polynesia": {
+      "country": "French Polynesia",
+      "backers": 8
+    },
+    "Oman": {
+      "country": "Oman",
+      "backers": 7
+    },
+    "Bermuda": {
+      "country": "Bermuda",
+      "backers": 7
+    },
+    "Sri Lanka": {
+      "country": "Sri Lanka",
+      "backers": 6
+    },
+    "Reunion": {
+      "country": "Reunion",
+      "backers": 6
+    },
+    "Pakistan": {
+      "country": "Pakistan",
+      "backers": 6
+    },
+    "Macao": {
+      "country": "Macao",
+      "backers": 6
+    },
+    "Cambodia": {
+      "country": "Cambodia",
+      "backers": 6
+    },
+    "Belarus": {
+      "country": "Belarus",
+      "backers": 6
+    },
+    "Kazakhstan": {
+      "country": "Kazakhstan",
+      "backers": 5
+    },
+    "Curaçao": {
+      "country": "Curaçao",
+      "backers": 5
+    },
+    "Republic of Moldova": {
+      "country": "Republic of Moldova",
+      "backers": 4
+    },
+    "Myanmar": {
+      "country": "Myanmar",
+      "backers": 4
+    },
+    "Monaco": {
+      "country": "Monaco",
+      "backers": 4
+    },
+    "Martinique": {
+      "country": "Martinique",
+      "backers": 4
+    },
+    "Liechtenstein": {
+      "country": "Liechtenstein",
+      "backers": 4
+    },
+    "Kenya": {
+      "country": "Kenya",
+      "backers": 4
+    },
+    "Jordan": {
+      "country": "Jordan",
+      "backers": 4
+    },
+    "Bangladesh": {
+      "country": "Bangladesh",
+      "backers": 4
+    },
+    "United States Minor Outlying Islands": {
+      "country": "United States Minor Outlying Islands",
+      "backers": 3
+    },
+    "Trinidad & Tobago": {
+      "country": "Trinidad & Tobago",
+      "backers": 3
+    },
+    "Namibia": {
+      "country": "Namibia",
+      "backers": 3
+    },
+    "Mongolia": {
+      "country": "Mongolia",
+      "backers": 3
+    },
+    "Maldives": {
+      "country": "Maldives",
+      "backers": 3
+    },
+    "Gibraltar": {
+      "country": "Gibraltar",
+      "backers": 3
+    },
+    "Georgia": {
+      "country": "Georgia",
+      "backers": 3
+    },
+    "Ecuador": {
+      "country": "Ecuador",
+      "backers": 3
+    },
+    "Albania": {
+      "country": "Albania",
+      "backers": 3
+    },
+    "Virgin Islands": {
+      "country": "Virgin Islands",
+      "backers": 2
+    },
+    "Uruguay": {
+      "country": "Uruguay",
+      "backers": 2
+    },
+    "Panama": {
+      "country": "Panama",
+      "backers": 2
+    },
+    "Morocco": {
+      "country": "Morocco",
+      "backers": 2
+    },
+    "Macedonia": {
+      "country": "Macedonia",
+      "backers": 2
+    },
+    "Guinea Equatorial": {
+      "country": "Guinea Equatorial",
+      "backers": 2
+    },
+    "Guatemala": {
+      "country": "Guatemala",
+      "backers": 2
+    },
+    "Greenland": {
+      "country": "Greenland",
+      "backers": 2
+    },
+    "Egypt": {
+      "country": "Egypt",
+      "backers": 2
+    },
+    "Cayman Islands": {
+      "country": "Cayman Islands",
+      "backers": 2
+    },
+    "Bosnia and Herzegovina": {
+      "country": "Bosnia and Herzegovina",
+      "backers": 2
+    },
+    "Zambia": {
+      "country": "Zambia",
+      "backers": 1
+    },
+    "Timor": {
+      "country": "Timor",
+      "backers": 1
+    },
+    "Tanzania": {
+      "country": "Tanzania",
+      "backers": 1
+    },
+    "Swaziland": {
+      "country": "Swaziland",
+      "backers": 1
+    },
+    "Seychelles": {
+      "country": "Seychelles",
+      "backers": 1
+    },
+    "Saint Barthelemy (FR)": {
+      "country": "Saint Barthelemy (FR)",
+      "backers": 1
+    },
+    "Paraguay": {
+      "country": "Paraguay",
+      "backers": 1
+    },
+    "Nigeria": {
+      "country": "Nigeria",
+      "backers": 1
+    },
+    "Mayotte": {
+      "country": "Mayotte",
+      "backers": 1
+    },
+    "Laos": {
+      "country": "Laos",
+      "backers": 1
+    },
+    "Kosovo": {
+      "country": "Kosovo",
+      "backers": 1
+    },
+    "Ivory Coast": {
+      "country": "Ivory Coast",
+      "backers": 1
+    },
+    "Iraq": {
+      "country": "Iraq",
+      "backers": 1
+    },
+    "Haiti": {
+      "country": "Haiti",
+      "backers": 1
+    },
+    "Guinea-Bissau": {
+      "country": "Guinea-Bissau",
+      "backers": 1
+    },
+    "Guinea": {
+      "country": "Guinea",
+      "backers": 1
+    },
+    "Guam": {
+      "country": "Guam",
+      "backers": 1
+    },
+    "Ghana": {
+      "country": "Ghana",
+      "backers": 1
+    },
+    "French Guiana": {
+      "country": "French Guiana",
+      "backers": 1
+    },
+    "Federation States of Micronesia": {
+      "country": "Federation States of Micronesia",
+      "backers": 1
+    },
+    "Faroe Islands": {
+      "country": "Faroe Islands",
+      "backers": 1
+    },
+    "Ethiopia": {
+      "country": "Ethiopia",
+      "backers": 1
+    },
+    "El Salvador": {
+      "country": "El Salvador",
+      "backers": 1
+    },
+    "Dominican Republic": {
+      "country": "Dominican Republic",
+      "backers": 1
+    },
+    "Dominica": {
+      "country": "Dominica",
+      "backers": 1
+    },
+    "Congo": {
+      "country": "Congo",
+      "backers": 1
+    },
+    "Central African Republic": {
+      "country": "Central African Republic",
+      "backers": 1
+    },
+    "Cape Verde": {
+      "country": "Cape Verde",
+      "backers": 1
+    },
+    "Cameroon": {
+      "country": "Cameroon",
+      "backers": 1
+    },
+    "Bolivia": {
+      "country": "Bolivia",
+      "backers": 1
+    },
+    "Bhutan": {
+      "country": "Bhutan",
+      "backers": 1
+    },
+    "Barbados": {
+      "country": "Barbados",
+      "backers": 1
+    },
+    "Aruba": {
+      "country": "Aruba",
+      "backers": 1
+    },
+    "Suma total": {
+      "country": "Suma total",
+      "backers": 25303
+    }
+  }
+]

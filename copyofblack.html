@@ -1,22 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="">
-    <!-- Odometr includes -->
-    <link rel="stylesheet" href="https://github.hubspot.com/odometer/themes/odometer-theme-train-station.css" />
-</head>
-<body>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="">
+<!-- Odometr includes -->
+<link rel="stylesheet" href="https://github.hubspot.com/odometer/themes/odometer-theme-train-station.css">
 <style>
 
     #mapid {
-        background-color: #ffffff;
+        background-color:black;
         height: 65vh;
         margin-bottom: 0px;
     }
+    #kick { text-decoration: none; }
 
     leaflet-control-attribution.leaflet-control {
         display: none;
@@ -26,25 +21,14 @@
         opacity: 0.3;
     }
 
-    .leaflet-bar a, .leaflet-bar a:hover {
-        background-color: #fff;
-        border-bottom: 1px solid #ccc;
-        width: 26px;
-        height: 26px;
-        line-height: 26px;
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        color: rgb(195, 195, 195, 0.9);
-    }
-
-    .leaflet-control-container a.leaflet-control-zoom-in {
-        background-color: rgb(255, 255, 255, 0.8    );
-
+    .leaflet-control-container  a.leaflet-control-zoom-in {
+        background-color: rgb(225, 225, 225, 0.6);
+        color: #000000;
     }
 
     .leaflet-control-container a.leaflet-control-zoom-out {
-        background-color: rgb(255, 255, 255, 0.8);
+        background-color: rgb(225, 225, 225, 0.6);
+        color: #000000
     }
 
     div.info.leaflet-control {
@@ -86,22 +70,23 @@
 
     .info {
         /*padding-left: 2em;*/
-        color:rgb(105, 105, 105, 0.7);
+        color: #ffffff;
         font-size: 12px;
-        background-color: rgb(255, 255, 255, 0.5);
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
-        -o-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
-        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+        background-color: rgb(12, 12, 15, 0.5);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+        -o-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
         -webkit-border-radius: 0.1em;
         -o-border-radius: 0.1em;
-        border-radius: 0.3em;
+        border-radius: 0.1em;
 
     }
 
     .info-heading {
+        text-decoration: none;
         display: block;
         padding-top: 0.5em;
-        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6);
     }
 
     .font-desc {
@@ -138,12 +123,10 @@
     path:hover {
         /* green fill: rgb(57, 233, 231);*/
         /*fill: rgb(189, 52, 215);*/
-        /*dark fucsia fill: rgb(138, 38, 157);*/
-        /*blue fill: rgb(35, 120, 245, 0.6);*/
-        fill: rgb(112, 128, 150, 0.7);
-        -webkit-transition: 1.25s all ease-in;
-        -o-transition: 1.25s all ease-in;
-        transition: 1.25s all ease-in;
+        /*dark fucsia*/ fill: rgb(138, 38, 157);
+        -webkit-transition: 0.5s all ease-in;
+        -o-transition: 0.5s all ease-in;
+        transition: 0.5s all ease-in;
     }
 
     span {
@@ -176,7 +159,7 @@
 
     span.odometer.sales {
         margin-left: 0.8em;
-        /*margin-top: -0.8em;*/
+        margin-top: -0.8em;
     }
 
     span.odometer.backers::before {
@@ -197,12 +180,11 @@
     span.odometer.sales::before {
         font-family: "Economica", sans-serif;
         width: 100%;
-        content: 'Sales: ';
+        content: 'Sales';
         font-size: 1.3em;
         margin-left: -2.1em;
         display: inline;
         position: absolute;
-        padding-bottom: 1em;
         margin-top: -0.2em;
     }
 
@@ -451,16 +433,16 @@
 </script>
 <script>
     let TO_DATE = 'Friday 4, May 2018';
-    let INFO_HEADING = '';
+    let INFO_HEADING = 'Our Kickstarter backers around the globe';
     //let TROPIC_COLOR = '#58E9DB'; // '#8A269D';
-    let TROPIC_COLOR = '#58E9DB';
-    let COUNTRIES_LAYER_OPACITY = '0.5';
+    let TROPIC_COLOR = '#8A269D';
+    let COUNTRIES_LAYER_OPACITY = '0.3';
     let INIT_ZOOM = 2;
     let HELLO_MESSAGE = 'Hi, we are Tropic! ';
     let THANKS_MESSAGE= 'Thanks for supporting us! &hearts;';
     let APPEALING_MESSAGE = 'Navigate to any country';
     let CENTER_COORDINATES = [41.394423, 2.169292];
-    let BASE_LAYER = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png';
+    let BASE_LAYER = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z}/{x}/{y}.png';
     let FROM_DATE = 'Tuesday 24, Apr';
 </script>
 <script>
@@ -542,577 +524,6 @@
     })(window);
 </script>
 <script>
-    /**
-     *
-     * **/
-
-    let splits = [
-        {
-            "country": "United States of America",
-            "backers": 7286
-        },
-        {
-            "country": "Germany",
-            "backers": 2775
-        },
-        {
-            "country": "Great Britain",
-            "backers": 2732
-        },
-        {
-            "country": "Canada",
-            "backers": 1167
-        },
-        {
-            "country": "Netherlands",
-            "backers": 1093
-        },
-        {
-            "country": "Australia",
-            "backers": 869
-        },
-        {
-            "country": "France",
-            "backers": 868
-        },
-        {
-            "country": "Singapore",
-            "backers": 757
-        },
-        {
-            "country": "Austria",
-            "backers": 643
-        },
-        {
-            "country": "Switzerland",
-            "backers": 632
-        },
-        {
-            "country": "Belgium",
-            "backers": 513
-        },
-        {
-            "country": "Spain",
-            "backers": 423
-        },
-        {
-            "country": "Sweden",
-            "backers": 357
-        },
-        {
-            "country": "Italy",
-            "backers": 355
-        },
-        {
-            "country": "Malaysia",
-            "backers": 293
-        },
-        {
-            "country": "Denmark",
-            "backers": 292
-        },
-        {
-            "country": "Hong Kong",
-            "backers": 229
-        },
-        {
-            "country": "Israel",
-            "backers": 226
-        },
-        {
-            "country": "Ireland",
-            "backers": 207
-        },
-        {
-            "country": "India",
-            "backers": 207
-        },
-        {
-            "country": "Thailand",
-            "backers": 193
-        },
-        {
-            "country": "Norway",
-            "backers": 192
-        },
-        {
-            "country": "New Zealand",
-            "backers": 159
-        },
-        {
-            "country": "Philippines",
-            "backers": 156
-        },
-        {
-            "country": "Czech Republic",
-            "backers": 152
-        },
-        {
-            "country": "Mexico",
-            "backers": 144
-        },
-        {
-            "country": "Japan",
-            "backers": 144
-        },
-        {
-            "country": "Finland",
-            "backers": 144
-        },
-        {
-            "country": "Indonesia",
-            "backers": 137
-        },
-        {
-            "country": "Brasil",
-            "backers": 117
-        },
-        {
-            "country": "Poland",
-            "backers": 106
-        },
-        {
-            "country": "United Arab Emirates",
-            "backers": 88
-        },
-        {
-            "country": "Hungary",
-            "backers": 78
-        },
-        {
-            "country": "Romania",
-            "backers": 77
-        },
-        {
-            "country": "Russia",
-            "backers": 73
-        },
-        {
-            "country": "Luxembourg",
-            "backers": 73
-        },
-        {
-            "country": "South Africa",
-            "backers": 71
-        },
-        {
-            "country": "Slovenia",
-            "backers": 71
-        },
-        {
-            "country": "Vietnam",
-            "backers": 70
-        },
-        {
-            "country": "Taiwan",
-            "backers": 70
-        },
-        {
-            "country": "Portugal",
-            "backers": 66
-        },
-        {
-            "country": "Ukraine",
-            "backers": 61
-        },
-        {
-            "country": "Lithuania",
-            "backers": 61
-        },
-        {
-            "country": "Republic of South Korea",
-            "backers": 57
-        },
-        {
-            "country": "Estonia",
-            "backers": 56
-        },
-        {
-            "country": "Bahrain",
-            "backers": 48
-        },
-        {
-            "country": "Bulgaria",
-            "backers": 45
-        },
-        {
-            "country": "Slovakia",
-            "backers": 42
-        },
-        {
-            "country": "Malta",
-            "backers": 38
-        },
-        {
-            "country": "Montenegro",
-            "backers": 37
-        },
-        {
-            "country": "Saudi Arabia",
-            "backers": 35
-        },
-        {
-            "country": "Chile",
-            "backers": 35
-        },
-        {
-            "country": "China",
-            "backers": 32
-        },
-        {
-            "country": "Latvia",
-            "backers": 31
-        },
-        {
-            "country": "Iceland",
-            "backers": 31
-        },
-        {
-            "country": "Puerto Rico",
-            "backers": 23
-        },
-        {
-            "country": "Cyprus",
-            "backers": 22
-        },
-        {
-            "country": "Colombia",
-            "backers": 20
-        },
-        {
-            "country": "Lebanon",
-            "backers": 18
-        },
-        {
-            "country": "Kuwait",
-            "backers": 17
-        },
-        {
-            "country": "Turkey",
-            "backers": 15
-        },
-        {
-            "country": "Peru",
-            "backers": 15
-        },
-        {
-            "country": "Costa Rica",
-            "backers": 15
-        },
-        {
-            "country": "Argentina",
-            "backers": 15
-        },
-        {
-            "country": "Serbia",
-            "backers": 13
-        },
-        {
-            "country": "Qatar",
-            "backers": 13
-        },
-        {
-            "country": "Brunei Darussalam",
-            "backers": 12
-        },
-        {
-            "country": "Mauritius",
-            "backers": 9
-        },
-        {
-            "country": "French Polynesia",
-            "backers": 8
-        },
-        {
-            "country": "Oman",
-            "backers": 7
-        },
-        {
-            "country": "Bermuda",
-            "backers": 7
-        },
-        {
-            "country": "Sri Lanka",
-            "backers": 6
-        },
-        {
-            "country": "Reunion",
-            "backers": 6
-        },
-        {
-            "country": "Pakistan",
-            "backers": 6
-        },
-        {
-            "country": "Macao",
-            "backers": 6
-        },
-        {
-            "country": "Cambodia",
-            "backers": 6
-        },
-        {
-            "country": "Belarus",
-            "backers": 6
-        },
-        {
-            "country": "Kazakhstan",
-            "backers": 5
-        },
-        {
-            "country": "Curaçao",
-            "backers": 5
-        },
-        {
-            "country": "Republic of Moldova",
-            "backers": 4
-        },
-        {
-            "country": "Myanmar",
-            "backers": 4
-        },
-        {
-            "country": "Monaco",
-            "backers": 4
-        },
-        {
-            "country": "Martinique",
-            "backers": 4
-        },
-        {
-            "country": "Liechtenstein",
-            "backers": 4
-        },
-        {
-            "country": "Kenya",
-            "backers": 4
-        },
-        {
-            "country": "Jordan",
-            "backers": 4
-        },
-        {
-            "country": "Bangladesh",
-            "backers": 4
-        },
-        {
-            "country": "United States Minor Outlying Islands",
-            "backers": 3
-        },
-        {
-            "country": "Trinidad & Tobago",
-            "backers": 3
-        },
-        {
-            "country": "Namibia",
-            "backers": 3
-        },
-        {
-            "country": "Mongolia",
-            "backers": 3
-        },
-        {
-            "country": "Maldives",
-            "backers": 3
-        },
-        {
-            "country": "Gibraltar",
-            "backers": 3
-        },
-        {
-            "country": "Georgia",
-            "backers": 3
-        },
-        {
-            "country": "Ecuador",
-            "backers": 3
-        },
-        {
-            "country": "Albania",
-            "backers": 3
-        },
-        {
-            "country": "Virgin Islands",
-            "backers": 2
-        },
-        {
-            "country": "Uruguay",
-            "backers": 2
-        },
-        {
-            "country": "Panama",
-            "backers": 2
-        },
-        {
-            "country": "Morocco",
-            "backers": 2
-        },
-        {
-            "country": "Macedonia",
-            "backers": 2
-        },
-        {
-            "country": "Guinea Equatorial",
-            "backers": 2
-        },
-        {
-            "country": "Guatemala",
-            "backers": 2
-        },
-        {
-            "country": "Greenland",
-            "backers": 2
-        },
-        {
-            "country": "Egypt",
-            "backers": 2
-        },
-        {
-            "country": "Cayman Islands",
-            "backers": 2
-        },
-        {
-            "country": "Bosnia and Herzegovina",
-            "backers": 2
-        },
-        {
-            "country": "Zambia",
-            "backers": 1
-        },
-        {
-            "country": "Timor",
-            "backers": 1
-        },
-        {
-            "country": "Tanzania",
-            "backers": 1
-        },
-        {
-            "country": "Swaziland",
-            "backers": 1
-        },
-        {
-            "country": "Seychelles",
-            "backers": 1
-        },
-        {
-            "country": "Saint Barthelemy (FR)",
-            "backers": 1
-        },
-        {
-            "country": "Paraguay",
-            "backers": 1
-        },
-        {
-            "country": "Nigeria",
-            "backers": 1
-        },
-        {
-            "country": "Mayotte",
-            "backers": 1
-        },
-        {
-            "country": "Laos",
-            "backers": 1
-        },
-        {
-            "country": "Kosovo",
-            "backers": 1
-        },
-        {
-            "country": "Ivory Coast",
-            "backers": 1
-        },
-        {
-            "country": "Iraq",
-            "backers": 1
-        },
-        {
-            "country": "Haiti",
-            "backers": 1
-        },
-        {
-            "country": "Guinea-Bissau",
-            "backers": 1
-        },
-        {
-            "country": "Guinea",
-            "backers": 1
-        },
-        {
-            "country": "Guam",
-            "backers": 1
-        },
-        {
-            "country": "Ghana",
-            "backers": 1
-        },
-        {
-            "country": "French Guiana",
-            "backers": 1
-        },
-        {
-            "country": "Federation States of Micronesia",
-            "backers": 1
-        },
-        {
-            "country": "Faroe Islands",
-            "backers": 1
-        },
-        {
-            "country": "Ethiopia",
-            "backers": 1
-        },
-        {
-            "country": "El Salvador",
-            "backers": 1
-        },
-        {
-            "country": "Dominican Republic",
-            "backers": 1
-        },
-        {
-            "country": "Dominica",
-            "backers": 1
-        },
-        {
-            "country": "Congo",
-            "backers": 1
-        },
-        {
-            "country": "Central African Republic",
-            "backers": 1
-        },
-        {
-            "country": "Cape Verde",
-            "backers": 1
-        },
-        {
-            "country": "Cameroon",
-            "backers": 1
-        },
-        {
-            "country": "Bolivia",
-            "backers": 1
-        },
-        {
-            "country": "Bhutan",
-            "backers": 1
-        },
-        {
-            "country": "Barbados",
-            "backers": 1
-        },
-        {
-            "country": "Aruba",
-            "backers": 1
-        },
-        {
-            "country": "total",
-            "backers": 25303
-        }
-    ];
-
     window.odometerOptions = {
         auto: false,
         duration: 500,
@@ -1120,8 +531,556 @@
     };
 
 
+    /**
+     *
+     * **/
+
+    let splits = [
+        {
+            "country": "American Samoa",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Argentina",
+            "backers": 2.6936,
+            "sales": 193.4776,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Australia",
+            "backers": 193.2658,
+            "sales": 13882.0178,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Austria",
+            "backers": 67.34,
+            "sales": 4836.9400000000005,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Bahrain",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Belarus",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Belgium",
+            "backers": 77.441,
+            "sales": 5562.481,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Brazil",
+            "backers": 9.4276,
+            "sales": 677.1716,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Brunei",
+            "backers": 2.6936,
+            "sales": 193.4776,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Bulgaria",
+            "backers": 3.367,
+            "sales": 241.847,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Canada",
+            "backers": 282.82800000000003,
+            "sales": 20315.148,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "China",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Colombia",
+            "backers": 2.0202,
+            "sales": 145.10819999999998,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Costa Rica",
+            "backers": 2.0202,
+            "sales": 145.10819999999998,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Croatia",
+            "backers": 2.0202,
+            "sales": 145.10819999999998,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Cyprus",
+            "backers": 2.0202,
+            "sales": 145.10819999999998,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Czechia",
+            "backers": 6.0606,
+            "sales": 435.3246,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Denmark",
+            "backers": 36.363600000000005,
+            "sales": 2611.9476,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Dominican Republic",
+            "backers": 3.367,
+            "sales": 241.847,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Egypt",
+            "backers": 3.367,
+            "sales": 241.847,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "El Salvador",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Estonia",
+            "backers": 2.6936,
+            "sales": 193.4776,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Finland",
+            "backers": 26.2626,
+            "sales": 1886.4066,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "France",
+            "backers": 43.771,
+            "sales": 3144.011,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "French Polynesia",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Germany",
+            "backers": 311.7842,
+            "sales": 22395.0322,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Greece",
+            "backers": 2.6936,
+            "sales": 193.4776,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Greenland",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Guam",
+            "backers": 2.6936,
+            "sales": 193.4776,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Guatemala",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Hong Kong",
+            "backers": 25.5892,
+            "sales": 1838.0372,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Hungary",
+            "backers": 2.6936,
+            "sales": 193.4776,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Iceland",
+            "backers": 2.0202,
+            "sales": 145.10819999999998,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "India",
+            "backers": 13.468,
+            "sales": 967.388,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Indonesia",
+            "backers": 9.4276,
+            "sales": 677.1716,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Ireland",
+            "backers": 45.791199999999996,
+            "sales": 3289.1191999999996,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Israel",
+            "backers": 31.649800000000003,
+            "sales": 2273.3618,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Italy",
+            "backers": 18.8552,
+            "sales": 1354.3432,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Japan",
+            "backers": 30.302999999999997,
+            "sales": 2176.623,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Jersey",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Jordan",
+            "backers": 2.0202,
+            "sales": 145.10819999999998,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Kenya",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Kosovo",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Kuwait",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Latvia",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Lebanon",
+            "backers": 3.367,
+            "sales": 241.847,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Liberia",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Lithuania",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Malaysia",
+            "backers": 44.4444,
+            "sales": 3192.3804,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Mauritius",
+            "backers": 3.367,
+            "sales": 241.847,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Mexico",
+            "backers": 17.508399999999998,
+            "sales": 1257.6044,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Moldova",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Mongolia",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Montenegro",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Nepal",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Netherlands",
+            "backers": 158.9224,
+            "sales": 11415.178399999999,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "New Caledonia",
+            "backers": 2.0202,
+            "sales": 145.10819999999998,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "New Zealand",
+            "backers": 41.7508,
+            "sales": 2998.9028,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Norway",
+            "backers": 25.5892,
+            "sales": 1838.0372,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Panama",
+            "backers": 4.7138,
+            "sales": 338.5858,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Peru",
+            "backers": 2.6936,
+            "sales": 193.4776,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Philippines",
+            "backers": 20.8754,
+            "sales": 1499.4514,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Poland",
+            "backers": 5.3872,
+            "sales": 386.9552,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Portugal",
+            "backers": 8.0808,
+            "sales": 580.4327999999999,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Qatar",
+            "backers": 4.7138,
+            "sales": 338.5858,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Romania",
+            "backers": 5.3872,
+            "sales": 386.9552,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Russia",
+            "backers": 2.6936,
+            "sales": 193.4776,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Saudi Arabia",
+            "backers": 2.0202,
+            "sales": 145.10819999999998,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Singapore",
+            "backers": 126.59920000000001,
+            "sales": 9093.4472,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Slovakia",
+            "backers": 2.0202,
+            "sales": 145.10819999999998,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Slovenia",
+            "backers": 3.367,
+            "sales": 241.847,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "South Africa",
+            "backers": 10.101,
+            "sales": 725.541,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "South Korea",
+            "backers": 12.7946,
+            "sales": 919.0186,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Spain",
+            "backers": 81.4814,
+            "sales": 5852.6974,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Sri Lanka",
+            "backers": 2.6936,
+            "sales": 193.4776,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Sweden",
+            "backers": 59.25920000000001,
+            "sales": 4256.5072,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Switzerland",
+            "backers": 84.8484,
+            "sales": 6094.5444,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Taiwan",
+            "backers": 15.488199999999999,
+            "sales": 1112.4962,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Thailand",
+            "backers": 32.9966,
+            "sales": 2370.1005999999998,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Trinidad & Tobago",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Tunisia",
+            "backers": 2.0202,
+            "sales": 145.10819999999998,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Turkey",
+            "backers": 2.6936,
+            "sales": 193.4776,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "U.S. Virgin Islands",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Ukraine",
+            "backers": 2.6936,
+            "sales": 193.4776,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "United Arab Emirates",
+            "backers": 3.367,
+            "sales": 241.847,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "United Kingdom",
+            "backers": 501.683,
+            "sales": 36035.203,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "United States of America",
+            "backers": 4138.7164,
+            "sales": 297278.3324,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Uruguay",
+            "backers": 0.6734,
+            "sales": 48.3694,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "Vietnam",
+            "backers": 7.407400000000001,
+            "sales": 532.0634,
+            "date": "2018-05-03T22:00:00.000Z"
+        },
+        {
+            "country": "total",
+            "backers": 6734,
+            "sales": 483694,
+            "date": "2018-05-03T22:00:00.000Z"
+        }
+    ];
+
+
     let totalItem = splits[splits.length - 1];
-    //let TOTAL_SALES = totalItem.sales;
+    let TOTAL_SALES = totalItem.sales;
     let TOTAL_BACKERS = totalItem.backers;
 
     let featureProperties = {};
@@ -1134,9 +1093,8 @@
 
         splits.forEach((item) => {
             if(countryName == item.country) {
-                console.log('match', item.country);
                 featureProperties.backers = item.backers;
-                //featureProperties.sales = item.sales;
+                featureProperties.sales = item.sales;
 
             }
 
@@ -1153,7 +1111,7 @@
 
     let BASE_LAYER_OPTIONS = {
         maxbounds : bounds,
-        attribution: 'By &copy; <a href="">Tropic</a> with &hearts; from Barcelona',
+        attribution: 'Made with &hearts; by &copy; <a href="https://www.kickstarter.com/projects/1466745684/tropic-the-ultimate-travel-shoe">Tropic</a>',
         minZoom: 2,
         maxZoom: 8,
         ext: 'png'
@@ -1188,7 +1146,7 @@
         this._backers = L.DomUtil.create('span', 'odometer economica-font backers');
         this._sales = L.DomUtil.create('span', 'odometer economica-font sales');
         this._break = L.DomUtil.create('br');
-        //this._date = L.DomUtil.create('span', 'date economica-fontfont-desc-sec');
+        this._date = L.DomUtil.create('span', 'date economica-fontfont-desc-sec');
         this._total = L.DomUtil.create('span', 'total animation economica-font font-desc');
 
         this.update();
@@ -1196,48 +1154,42 @@
     };
 
     info.update = function (props) {
-        console.log(props);
 
         this._div.innerHTML = '';
-        this._heading = L.DomUtil.create('span', 'info-heading font-desktop economica-font');
-        this._heading.innerHTML =  INFO_HEADING;
-        this._div.appendChild(this._heading);
-        //this._date.innerHTML = ''+ FROM_DATE + ' - ' + TO_DATE + '<br />';
-        //this._div.appendChild(this._date);
 
-        //this._sep = L.DomUtil.create('hr', 'sep');
-        //this._div.appendChild(this._sep);
+        this._heading = L.DomUtil.create('span', 'info-heading font-desktop economica-font');
+        this._heading.innerHTML = INFO_HEADING
+        this._div.appendChild(this._heading);
+        this._date.innerHTML = ''+ FROM_DATE + ' - ' + TO_DATE + '<br />';
+        this._div.appendChild(this._date);
+
+        this._sep = L.DomUtil.create('hr', 'sep');
+        this._div.appendChild(this._sep);
 
         this._subheading = L.DomUtil.create('span', 'country uppercase economica-font font-desc');
 
         if(props) {
             this._subheading.innerHTML = props.name + '<br/>'
         }else {
-            this._total.innerHTML = 'Total backers: ' + TOTAL_BACKERS;
+            this._total.innerHTML = 'Total backers: ' + TOTAL_BACKERS + '  |  ' + ' Total sales: ' + TOTAL_SALES + ' €' + '<br />';
             this._div.appendChild(this._total);
         }
         // setInnerHTMLandRemoveUppercase(this._subheading);
 
         this._div.appendChild(this._subheading);
 
-        if(props) {
 
-            if(props.backers) {
-                this._div.appendChild(this._backers);
-                this._div.appendChild(this._break);
-            }
-        }
-
+        this._div.appendChild(this._backers);
 
         this._div.appendChild(this._break);
-       // this._div.appendChild(this._sales);
+        this._div.appendChild(this._sales);
 
         this._sales.innerHTML = '';
         this._backers.innerHTML = '';
 
         if(props) {
-            this._backers.innerHTML = parseInt(Math.ceil(props.backers, 1), 10);
-            //this._sales.innerHTML = parseInt(Math.ceil(props.sales, 1), 10 ) + ' €';
+            this._backers.innerHTML = parseInt(Math.ceil(props.backers, 1));
+            this._sales.innerHTML = parseInt(Math.ceil(props.sales, 1)) + ' €';
 
         }
     };
@@ -1266,25 +1218,18 @@
 
         return {
             color: countryColor,
-            width: '0.2em',
-            opacity: 0.05,
+            width: '0.3em',
+            opacity: 0.2,
             fillColor: countryColor,
             fillOpacity: COUNTRIES_LAYER_OPACITY
         }
     }
 
-    '#0E2421'
-    '#18403C'
-    '#25615B'
-    '#44AE9B'
-    '#52A1A6'
-    '#58E9DB'
     function getColorFromScale(value, brandColors) {
         let colors = [];
         brandColors ?
-            colors = ['#D3D3D3', '#0E2421', '#18403C', '#25615B', '#44AE9B', '#52A1A6', '#58E9DB' ] :
-            //colors = ['#D3D3D3', '#18403C', '#25615B', '#44AE9B', '#52A1A6', '#58E9DB', '#52B890' ] :
-            colors = ['#DCDCDC', '#826205', '#A67D06', '#A6901E', '#BAA122', '#E9B511', '#FFC100'];
+            colors = ['#000000', '#18403C', '#25615B', '#44AE9B', '#52A1A6', '#58E9DB', '#52B890' ] :
+            colors = ['#000000', '#41124A', '#701F7F', '#9228A6', '#A15EAD', '#D97FE9', '#8C59E9'];
 
         return value > 10000  ? colors[6]:
             value > 500  ?  colors[5] :
@@ -1326,9 +1271,7 @@
         layer.on({
             mouseover: showInfo,
             mouseout: resetHighlight,
-           /* click: zoomToFeature */
+            /* click: zoomToFeature */
         });
     }
 </script>
-</body>
-</html>
