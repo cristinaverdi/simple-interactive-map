@@ -1,0 +1,877 @@
+[
+  {
+    "country": "Afghanistan",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Albania",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Algeria",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "American Samoa",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Andorra",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Antigua & Barbuda",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Argentina",
+    "backers": 23.6556,
+    "sales": 1926.3744
+  },
+  {
+    "country": "Aruba",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Australia",
+    "backers": 528.3084,
+    "sales": 43022.3616
+  },
+  {
+    "country": "Austria",
+    "backers": 378.4896,
+    "sales": 30821.9904
+  },
+  {
+    "country": "Azerbaijan",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Bahamas",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Bahrain",
+    "backers": 10.5136,
+    "sales": 856.1664000000001
+  },
+  {
+    "country": "Bangladesh",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Barbados",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Belarus",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Belgium",
+    "backers": 360.0908,
+    "sales": 29323.6992
+  },
+  {
+    "country": "Bermuda",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Bhutan",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Bolivia",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Bosnia & Herzegovina",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Brazil",
+    "backers": 94.6224,
+    "sales": 7705.4976
+  },
+  {
+    "country": "Brunei",
+    "backers": 10.5136,
+    "sales": 856.1664000000001
+  },
+  {
+    "country": "Bulgaria",
+    "backers": 28.9124,
+    "sales": 2354.4576
+  },
+  {
+    "country": "Burkina Faso",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Burundi",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Cote d'Ivoire",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Cambodia",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Cameroon",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Canada",
+    "backers": 762.236,
+    "sales": 62072.064000000006
+  },
+  {
+    "country": "Cape Verde",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Cayman Islands",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Chile",
+    "backers": 21.0272,
+    "sales": 1712.3328000000001
+  },
+  {
+    "country": "China",
+    "backers": 7.885199999999999,
+    "sales": 642.1247999999999
+  },
+  {
+    "country": "Colombia",
+    "backers": 26.284,
+    "sales": 2140.416
+  },
+  {
+    "country": "Congo - Kinshasa",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Costa Rica",
+    "backers": 23.6556,
+    "sales": 1926.3744
+  },
+  {
+    "country": "Croatia",
+    "backers": 26.284,
+    "sales": 2140.416
+  },
+  {
+    "country": "Curaçao",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Cyprus",
+    "backers": 15.770399999999999,
+    "sales": 1284.2495999999999
+  },
+  {
+    "country": "Czechia",
+    "backers": 102.5076,
+    "sales": 8347.6224
+  },
+  {
+    "country": "Denmark",
+    "backers": 186.6164,
+    "sales": 15196.9536
+  },
+  {
+    "country": "Djibouti",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Dominican Republic",
+    "backers": 18.3988,
+    "sales": 1498.2912
+  },
+  {
+    "country": "Ecuador",
+    "backers": 10.5136,
+    "sales": 856.1664000000001
+  },
+  {
+    "country": "Egypt",
+    "backers": 13.142,
+    "sales": 1070.208
+  },
+  {
+    "country": "El Salvador",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Estonia",
+    "backers": 31.540799999999997,
+    "sales": 2568.4991999999997
+  },
+  {
+    "country": "Ethiopia",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Faroe Islands",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Finland",
+    "backers": 97.2508,
+    "sales": 7919.5392
+  },
+  {
+    "country": "France",
+    "backers": 496.7676,
+    "sales": 40453.8624
+  },
+  {
+    "country": "French Polynesia",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Georgia",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Germany",
+    "backers": 1571.7832,
+    "sales": 127996.8768
+  },
+  {
+    "country": "Ghana",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Gibraltar",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Greece",
+    "backers": 39.426,
+    "sales": 3210.6240000000003
+  },
+  {
+    "country": "Greenland",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Grenada",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Guadeloupe",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Guam",
+    "backers": 7.885199999999999,
+    "sales": 642.1247999999999
+  },
+  {
+    "country": "Guatemala",
+    "backers": 13.142,
+    "sales": 1070.208
+  },
+  {
+    "country": "Guernsey",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Guinea",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Guinea-Bissau",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Guyana",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Haiti",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Honduras",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Hong Kong",
+    "backers": 155.0756,
+    "sales": 12628.4544
+  },
+  {
+    "country": "Hungary",
+    "backers": 44.6828,
+    "sales": 3638.7072
+  },
+  {
+    "country": "Iceland",
+    "backers": 23.6556,
+    "sales": 1926.3744
+  },
+  {
+    "country": "India",
+    "backers": 165.5892,
+    "sales": 13484.6208
+  },
+  {
+    "country": "Indonesia",
+    "backers": 105.136,
+    "sales": 8561.664
+  },
+  {
+    "country": "Iraq",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Ireland",
+    "backers": 160.3324,
+    "sales": 13056.537600000001
+  },
+  {
+    "country": "Israel",
+    "backers": 165.5892,
+    "sales": 13484.6208
+  },
+  {
+    "country": "Italy",
+    "backers": 241.8128,
+    "sales": 19691.8272
+  },
+  {
+    "country": "Jamaica",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Japan",
+    "backers": 123.5348,
+    "sales": 10059.9552
+  },
+  {
+    "country": "Jersey",
+    "backers": 13.142,
+    "sales": 1070.208
+  },
+  {
+    "country": "Jordan",
+    "backers": 10.5136,
+    "sales": 856.1664000000001
+  },
+  {
+    "country": "Kazakhstan",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Kenya",
+    "backers": 10.5136,
+    "sales": 856.1664000000001
+  },
+  {
+    "country": "Kosovo",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Kuwait",
+    "backers": 18.3988,
+    "sales": 1498.2912
+  },
+  {
+    "country": "Kyrgyzstan",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Laos",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Latvia",
+    "backers": 21.0272,
+    "sales": 1712.3328000000001
+  },
+  {
+    "country": "Lebanon",
+    "backers": 18.3988,
+    "sales": 1498.2912
+  },
+  {
+    "country": "Liberia",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Liechtenstein",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Lithuania",
+    "backers": 42.0544,
+    "sales": 3424.6656000000003
+  },
+  {
+    "country": "Luxembourg",
+    "backers": 34.1692,
+    "sales": 2782.5407999999998
+  },
+  {
+    "country": "Macau",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Macedonia (FYROM)",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Madagascar",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Malaysia",
+    "backers": 207.64360000000002,
+    "sales": 16909.2864
+  },
+  {
+    "country": "Maldives",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Mali",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Malta",
+    "backers": 26.284,
+    "sales": 2140.416
+  },
+  {
+    "country": "Martinique",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Mauritius",
+    "backers": 7.885199999999999,
+    "sales": 642.1247999999999
+  },
+  {
+    "country": "Mayotte",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Mexico",
+    "backers": 141.9336,
+    "sales": 11558.2464
+  },
+  {
+    "country": "Moldova",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Monaco",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Mongolia",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Montenegro",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Morocco",
+    "backers": 10.5136,
+    "sales": 856.1664000000001
+  },
+  {
+    "country": "Mozambique",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Myanmar (Burma)",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Namibia",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Nauru",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Nepal",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Netherlands",
+    "backers": 654.4716,
+    "sales": 53296.3584
+  },
+  {
+    "country": "New Caledonia",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "New Zealand",
+    "backers": 99.8792,
+    "sales": 8133.5808
+  },
+  {
+    "country": "Nicaragua",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Niger",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Nigeria",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Norway",
+    "backers": 120.9064,
+    "sales": 9845.9136
+  },
+  {
+    "country": "Oman",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Pakistan",
+    "backers": 7.885199999999999,
+    "sales": 642.1247999999999
+  },
+  {
+    "country": "Palestine",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Panama",
+    "backers": 10.5136,
+    "sales": 856.1664000000001
+  },
+  {
+    "country": "Paraguay",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Peru",
+    "backers": 18.3988,
+    "sales": 1498.2912
+  },
+  {
+    "country": "Philippines",
+    "backers": 139.3052,
+    "sales": 11344.2048
+  },
+  {
+    "country": "Poland",
+    "backers": 68.3384,
+    "sales": 5565.0815999999995
+  },
+  {
+    "country": "Portugal",
+    "backers": 52.568,
+    "sales": 4280.832
+  },
+  {
+    "country": "Puerto Rico",
+    "backers": 18.3988,
+    "sales": 1498.2912
+  },
+  {
+    "country": "Qatar",
+    "backers": 15.770399999999999,
+    "sales": 1284.2495999999999
+  },
+  {
+    "country": "R√©union",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Romania",
+    "backers": 65.71000000000001,
+    "sales": 5351.04
+  },
+  {
+    "country": "Russia",
+    "backers": 52.568,
+    "sales": 4280.832
+  },
+  {
+    "country": "Rwanda",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "S√£o Tom√© & Pr√≠ncipe",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Samoa",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Saudi Arabia",
+    "backers": 21.0272,
+    "sales": 1712.3328000000001
+  },
+  {
+    "country": "Senegal",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Serbia",
+    "backers": 7.885199999999999,
+    "sales": 642.1247999999999
+  },
+  {
+    "country": "Seychelles",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Sierra Leone",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Singapore",
+    "backers": 446.82800000000003,
+    "sales": 36387.072
+  },
+  {
+    "country": "Slovakia",
+    "backers": 26.284,
+    "sales": 2140.416
+  },
+  {
+    "country": "Slovenia",
+    "backers": 47.3112,
+    "sales": 3852.7488
+  },
+  {
+    "country": "Solomon Islands",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "South Africa",
+    "backers": 52.568,
+    "sales": 4280.832
+  },
+  {
+    "country": "South Korea",
+    "backers": 52.568,
+    "sales": 4280.832
+  },
+  {
+    "country": "South Sudan",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Spain",
+    "backers": 320.6648,
+    "sales": 26113.075200000003
+  },
+  {
+    "country": "Sri Lanka",
+    "backers": 10.5136,
+    "sales": 856.1664000000001
+  },
+  {
+    "country": "St. Kitts & Nevis",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "St. Vincent & Grenadines",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Sweden",
+    "backers": 226.0424,
+    "sales": 18407.5776
+  },
+  {
+    "country": "Switzerland",
+    "backers": 373.2328,
+    "sales": 30393.9072
+  },
+  {
+    "country": "Taiwan",
+    "backers": 49.9396,
+    "sales": 4066.7904
+  },
+  {
+    "country": "Tanzania",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Thailand",
+    "backers": 144.56199999999998,
+    "sales": 11772.287999999999
+  },
+  {
+    "country": "Timor-Leste",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Trinidad & Tobago",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Tunisia",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Turkey",
+    "backers": 13.142,
+    "sales": 1070.208
+  },
+  {
+    "country": "U.S. Virgin Islands",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Uganda",
+    "backers": 2.6284,
+    "sales": 214.04160000000002
+  },
+  {
+    "country": "Ukraine",
+    "backers": 47.3112,
+    "sales": 3852.7488
+  },
+  {
+    "country": "United Arab Emirates",
+    "backers": 55.1964,
+    "sales": 4494.8736
+  },
+  {
+    "country": "United Kingdom",
+    "backers": 1826.738,
+    "sales": 148758.912
+  },
+  {
+    "country": "United States of America",
+    "backers": 14287.982399999999,
+    "sales": 1163530.1376
+  },
+  {
+    "country": "Uruguay",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Venezuela",
+    "backers": 1,
+    "sales": 55
+  },
+  {
+    "country": "Vietnam",
+    "backers": 78.852,
+    "sales": 6421.2480000000005
+  },
+  {
+    "country": "Zambia",
+    "backers": 5.2568,
+    "sales": 428.08320000000003
+  },
+  {
+    "country": "Total",
+    "backers": 26284,
+    "sales": 2140416
+  }
+]
